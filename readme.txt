@@ -21,4 +21,11 @@ Git is a version control system.
   So，git add 是把文件添加到暂存区，而git commit是把暂存区所有文件提交到当前分支
   Git是跟踪的修改（暂存区）。理清楚才能明白一些命令
 4.撤销修改
-  git checkout -- file 可以丢弃工作区的修改
+  a.丢弃工作区的修改 git checkout -- file 
+  b.已经add到暂存区，先git reset HEAD <file>回到工作区，再用a
+  c.已经commit到版本库，可以使用版本回退（前提没有提交到远程库） 
+5.删除文件
+  删除也是一种修改
+  工作区删除 rm test.txt 
+  a.确实删除  git rm 并且git commit
+  b.删错了  git checkout -- file
