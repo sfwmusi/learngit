@@ -37,3 +37,44 @@ Git is a version control system.
 3.从远程库克隆  先在GitHub创建一个新仓库，勾选Initialize……
   使用命令 git clone 地址（git@github.com:yourname/repo_name.git  or   https://）
 四、分支管理  
+master分支应该是非常稳定的，平时不在上面干活，干活都在dev分支，然后每个人都有自己的分支，再合并到dev分支，做好后dev再合并到master
+1.创建与合并分支
+  创建分支 git branch <name>
+  切换分支 git checkout <name>
+ （创建+切换）git checkout -b <name>
+  查看分支 git branch
+  合并某分支到当前分支 git merge <name>  （Fast forward）
+  git merge --no-ff -m "message" <name>  （普通合并，可历史查看）
+  删除分支 git branch -d <name>
+  一般先合并再删除，强行删除-D
+2.Bug分支
+  适用于当前分支工作不想现在提交，又需要立马在另一分支工作，之后再返回操作
+  git stash 隐藏当前工作现场
+  git stash list 查看工作现场隐藏在哪
+  恢复：
+  a.先 git stash apply（可以选择apply哪一个，通过list查看），再删除git stash drop
+  b.直接git stash pop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
