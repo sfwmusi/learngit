@@ -54,8 +54,20 @@ master分支应该是非常稳定的，平时不在上面干活，干活都在de
   恢复：
   a.先 git stash apply（可以选择apply哪一个，通过list查看），再删除git stash drop
   b.直接git stash pop
-
-
+3.多人协作
+  推送分支 git push origin master（origin，master可修改），一般master为主分支，dev是开发分支，这些需要推送
+  抓取分支 git clone（一般只有master分支），使用git checkout -b dev origin/dev可以从远程origin的dev分支到本地
+  当推送失败时，需要根据提示 git pull试图合并；如果合并冲突，则解决冲突（手动），并在本地提交，之后再推送
+  如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to=origin/<branch> dev
+五、标签管理  commit号和标签，类似IP与域名的关系
+1.创建标签 
+   git tag xxx  默认打到最新提交的commit上，也可以打到指定的commit上，后面加上指定id就可以
+   git tag -a <tagname> -m "blablabla"  指定标签信息 
+   git tag 查看所有标签
+   git show <tagname> 查看标签内容
+2.操作标签
+   git tag -d xxx 本地删除  git push origin <tagname> 推送一个标签 git push origin --tags 所有
+   git push origin :refs/tags/<tagname>  删除远程标签（先本地删除）
 
 
 
