@@ -34,3 +34,6 @@ Git is a version control system.
   登录GitHub Add SSH Key   填写任意Title，在Key中粘贴id_rsa.pub的内容
 2.添加远程库，登录GitHub，创建一个新的仓库，填写一个名字，其他保持默认。根据提示操作，第二个，Push an existing repo……
   （本地作了提交，可以通过命令 git push origin master提交到GitHub）
+3.从远程库克隆  先在GitHub创建一个新仓库，勾选Initialize……
+  使用命令 git clone 地址（git@github.com:yourname/repo_name.git  or   https://）
+四、分支管理  
