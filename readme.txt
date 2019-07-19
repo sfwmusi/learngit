@@ -29,3 +29,8 @@ Git is a version control system.
   工作区删除 rm test.txt 
   a.确实删除  git rm 并且git commit
   b.删错了  git checkout -- file
+三、远程仓库
+1.创建SSH秘钥 ssh-keygen -t rsa -C "youremail@example.com"，可在用户主目录中找到id_rsa和id_rsa.pub两个文件
+  登录GitHub Add SSH Key   填写任意Title，在Key中粘贴id_rsa.pub的内容
+2.添加远程库，登录GitHub，创建一个新的仓库，填写一个名字，其他保持默认。根据提示操作，第二个，Push an existing repo……
+  （本地作了提交，可以通过命令 git push origin master提交到GitHub）
