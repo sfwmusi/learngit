@@ -1,2 +1,13 @@
 # My configurations:
 get_init.ini
+
+
+
+# Windows:
+Desktop.ini
+
+
+
+# Python
+*.py[cod]
+dist
