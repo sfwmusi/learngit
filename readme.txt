@@ -70,7 +70,15 @@ master分支应该是非常稳定的，平时不在上面干活，干活都在de
    git push origin :refs/tags/<tagname>  删除远程标签（先本地删除）
 六、1.使用GitHub https://github.com
    先fork，再在自己的账号下clone，这样可以发起推送，pull request  
-    2.使用码云https://gitee.com/   
+    2.使用码云https://gitee.com/ 
+      先git remote rm origin，再关联GitHub远程库git remote add github git@github.com:xxx/xxx.git	
+	  和码云的远程库git remote add gitee git@gitee.com:xxx/xxx.git
+	之后推送要改成git push github master
+七、自定义Git
+   1.忽略特殊文件，比如密码的配置文件等
+   在Git工作区的根目录下创建一个特殊的.gitignore文件，注意在Windows下无法创建，需要通过保存或另存为（因为没有文件名）
+   只需要在里面添加想要忽略的文件名即可，最后提交到版本库
+   
 
 
 
