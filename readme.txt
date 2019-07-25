@@ -68,6 +68,10 @@ master分支应该是非常稳定的，平时不在上面干活，干活都在de
 2.操作标签
    git tag -d xxx 本地删除  git push origin <tagname> 推送一个标签 git push origin --tags 所有
    git push origin :refs/tags/<tagname>  删除远程标签（先本地删除）
+六、1.使用GitHub https://github.com
+   先fork，再在自己的账号下clone，这样可以发起推送，pull request  
+    2.使用码云https://gitee.com/   
+
 
 
 
